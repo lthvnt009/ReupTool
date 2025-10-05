@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Vị trí: /ui/widgets/librarytoolbarwidget.ui -->
+<!-- Phiên bản: 1.2 (Thêm Hành động hàng loạt) -->
+<ui version="4.0">
+ <class>LibraryToolbarWidget</class>
+ <widget class="QWidget" name="LibraryToolbarWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QToolButton" name="importButton">
+     <property name="text">
+      <string>Nhập</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="exportButton">
+     <property name="text">
+      <string>Xuất</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="batchActionsButton">
+     <property name="text">
+      <string>Hành động hàng loạt</string>
+     </property>
+     <property name="popupMode">
+      <enum>QToolButton::MenuButtonPopup</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer_2">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeType">
+      <enum>QSizePolicy::Fixed</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QLineEdit" name="searchLineEdit">
+     <property name="placeholderText">
+      <string>Tìm kiếm Tiêu đề, Mô tả, Tags...</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="channelFilterComboBox">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="statusFilterComboBox"/>
+   </item>
+   <item>
+    <widget class="QPushButton" name="filterButton">
+     <property name="text">
+      <string>Lọc</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QPushButton" name="resetButton">
+     <property name="text">
+      <string>Reset</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QToolButton" name="settingsButton">
+     <property name="text">
+      <string>⚙️</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="helpButton">
+     <property name="text">
+      <string>?</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
+

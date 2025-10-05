@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Vị trí: /ui/dialogs/databasemaintenancedialog.ui -->
+<!-- Phiên bản: 1.1 (Thêm chức năng tìm Trùng lặp) -->
+<ui version="4.0">
+ <class>DatabaseMaintenanceDialog</class>
+ <widget class="QDialog" name="DatabaseMaintenanceDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>450</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Bảo trì Cơ sở dữ liệu</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="cleanupGroupBox">
+     <property name="title">
+      <string>Dọn dẹp Database</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="cleanupInfoLabel">
+        <property name="text">
+         <string>Đang kiểm tra...</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="cleanupButton">
+        <property name="enabled">
+         <bool>false</bool>
+        </property>
+        <property name="text">
+         <string>Dọn dẹp ngay</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="duplicatesGroupBox">
+     <property name="title">
+      <string>Tìm Bản Ghi Trùng Lặp</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Tìm kiếm các video có cùng Link Video đã được nhập nhiều lần.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="findDuplicatesButton">
+        <property name="text">
+         <string>Tìm kiếm Trùng lặp</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTreeWidget" name="duplicatesTreeWidget">
+        <property name="alternatingRowColors">
+         <bool>true</bool>
+        </property>
+        <column>
+         <property name="text">
+          <string>Thông tin Video</string>
+         </property>
+        </column>
+        <column>
+         <property name="text">
+          <string>ID</string>
+         </property>
+        </column>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Close</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DatabaseMaintenanceDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DatabaseMaintenanceDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>
+

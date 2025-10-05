@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Phiên bản: 2.2 (Tích hợp Tab Cài đặt) -->
+<!-- Vị trí: /ui/mainwindow.ui -->
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1024</width>
+    <height>768</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Re-up Tool</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QVBoxLayout" name="verticalLayout">
+    <item>
+     <widget class="QTabWidget" name="tabWidget">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tab_DataInput">
+       <attribute name="title">
+        <string>Nhập Dữ Liệu</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_3"/>
+      </widget>
+      <widget class="QWidget" name="tab_VideoDownloader">
+       <attribute name="title">
+        <string>Tải Video</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_4"/>
+      </widget>
+      <widget class="QWidget" name="tab_ManualUpload">
+       <attribute name="title">
+        <string>Up Video Thủ Công</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_5"/>
+      </widget>
+      <widget class="QWidget" name="tab_AutoUpload">
+       <attribute name="title">
+        <string>Up Video Tự Động</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_6"/>
+      </widget>
+      <widget class="QWidget" name="tab_ChannelManager">
+       <attribute name="title">
+        <string>Quản Lý Kênh</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_2"/>
+      </widget>
+      <widget class="QWidget" name="tab_Library">
+       <attribute name="title">
+        <string>Thư viện</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_7"/>
+      </widget>
+      <widget class="QWidget" name="tab_Settings">
+       <attribute name="title">
+        <string>Cài Đặt</string>
+       </attribute>
+       <layout class="QVBoxLayout" name="verticalLayout_8"/>
+      </widget>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1024</width>
+     <height>25</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

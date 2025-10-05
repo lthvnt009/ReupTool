@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Phiên bản: 1.1 (Thêm nút Cài đặt) -->
+<!-- Vị trí: /ui/widgets/datainputtoolbarwidget.ui -->
+<ui version="4.0">
+ <class>DataInputToolbarWidget</class>
+ <widget class="QWidget" name="DataInputToolbarWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>50</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout">
+   <item>
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Số ngày hiển thị:</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QSpinBox" name="daysSpinBox">
+     <property name="minimum">
+      <number>1</number>
+     </property>
+     <property name="maximum">
+      <number>30</number>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line_2">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="importToolButton">
+     <property name="toolTip">
+      <string>Nhập từ File</string>
+     </property>
+     <property name="text">
+      <string>Nhập</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="Line" name="line">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QCheckBox" name="downloadNowCheckBox">
+     <property name="text">
+      <string>Tải ngay sau khi lưu</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QComboBox" name="downloadScopeComboBox"/>
+   </item>
+   <item>
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item>
+    <widget class="QToolButton" name="saveAllToolButton">
+     <property name="toolTip">
+      <string>Lưu Tất Cả</string>
+     </property>
+     <property name="text">
+      <string>Lưu Tất Cả</string>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QToolButton" name="settingsToolButton">
+     <property name="toolTip">
+      <string>Cài đặt</string>
+     </property>
+     <property name="text">
+      <string>⚙️</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

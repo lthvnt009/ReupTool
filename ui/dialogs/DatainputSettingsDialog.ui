@@ -1,0 +1,133 @@
+<!-- Vị trí: /ui/dialogs/datainputsettingsdialog.ui -->
+<!-- Phiên bản: 2.1 (Loại bỏ tùy chọn thừa) -->
+<ui version="4.0">
+ <class>DataInputSettingsDialog</class>
+ <widget class="QDialog" name="DataInputSettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>450</width>
+    <height>250</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cài Đặt Tab Nhập Dữ Liệu</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="settingsTabWidget">
+     <property name="currentIndex">
+      <number>1</number>
+     </property>
+     <widget class="QWidget" name="tabNotifications">
+      <attribute name="title">
+       <string>Thông báo</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QCheckBox" name="warnOnUnfinishedCheckBox">
+         <property name="text">
+          <string>Hiển thị cảnh báo khi thoát mà còn kênh chưa lưu</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabSaveOptions">
+      <attribute name="title">
+       <string>Tùy chọn Lưu</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <widget class="QLabel" name="label">
+         <property name="text">
+          <string>Hành động sau khi một kênh đã hoàn tất (đã lưu tất cả các ngày):</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="moveDownOnSaveCheckBox">
+         <property name="text">
+          <string>Di chuyển xuống dưới cùng (trong nhóm các kênh đã lưu)</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DataInputSettingsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DataInputSettingsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,5 @@
+// Phiên bản: 1.0
+// Vị trí: /resources.rc
+
+// IDI_ICON1 là một định danh, ICON là loại tài nguyên, "icon.ico" là tên file
+IDI_ICON1 ICON "icon.ico"

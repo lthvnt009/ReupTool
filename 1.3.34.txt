@@ -1,0 +1,30 @@
+Kế hoạch Cải tiến Tab Cài đặt
+Tài liệu này vạch ra các giai đoạn và bước đi cụ thể để hiện thực hóa các chức năng trong Tab Cài đặt theo yêu cầu, đồng thời đảm bảo tính ổn định của ứng dụng.
+
+Giai đoạn 1: Nền tảng & Giao diện (UI) - (Chúng ta đang ở đây)
+Mục tiêu của giai đoạn này là xây dựng toàn bộ "bộ xương" giao diện cho Tab Cài đặt, đảm bảo tất cả các thành phần trực quan đều được đặt đúng vị trí trước khi chúng ta thêm logic phức tạp.
+
+Bước 1.1: Thiết kế và cập nhật giao diện cho tất cả 7 danh mục trong Tab Cài đặt (.ui files) dựa trên kế hoạch chi tiết của bạn.
+
+Bước 1.2: Tái cấu trúc giao diện: Di chuyển chức năng "Cập nhật" từ dialog "Cài đặt Tải về" sang tab "Cập nhật & Giới thiệu" để tập trung quản lý.
+
+Giai đoạn 2: Logic cho các Tab đơn giản ("Chung", "Giao diện")
+Bước 2.1: Hiện thực logic lưu và tải cài đặt cho Ngôn ngữ, Giao diện (Theme), Phông chữ và Trạng thái cửa sổ.
+
+Bước 2.2: Tích hợp việc áp dụng các cài đặt này vào ứng dụng khi khởi động và ngay khi người dùng thay đổi chúng.
+
+Giai đoạn 3: Logic cho các Tab chức năng ("Dữ liệu & Sao lưu", "Cập nhật & Giới thiệu")
+Bước 3.1: Hiện thực chức năng thay đổi đường dẫn CSDL, tự động lưu, sao lưu và phục hồi.
+
+Bước 3.2: Chuyển và hoàn thiện logic cho việc kiểm tra và thực hiện cập nhật ứng dụng/yt-dlp tại tab mới.
+
+Giai đoạn 4: Logic cho các Tab phức tạp ("Nguồn Dữ liệu", "Mạng", "Bảo mật")
+Bước 4.1: Hiện thực logic quản lý (thêm/sửa/xóa/kiểm tra) API key và Proxy.
+
+Bước 4.2: Hiện thực logic tự động phát hiện trình duyệt/profile và nhập cookie.
+
+Bước 4.3: Tích hợp các cài đặt về Nguồn dữ liệu, Proxy, Cookie vào các chức năng lấy metadata và tải video.
+
+Bước 4.4: Hiện thực chức năng đặt mật khẩu cho CSDL.
+
+Chúng ta sẽ thực hiện tuần tự theo từng bước. Sau mỗi bước, tôi sẽ cung cấp mã nguồn và chờ xác nhận từ bạn trước khi tiếp tục.

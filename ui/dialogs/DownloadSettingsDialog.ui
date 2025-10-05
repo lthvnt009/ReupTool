@@ -1,0 +1,453 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Phiên bản: 1.4 (Loại bỏ Tab Cập nhật) -->
+<!-- Vị trí: /ui/dialogs/downloadsettingsdialog.ui -->
+<ui version="4.0">
+ <class>DownloadSettingsDialog</class>
+ <widget class="QDialog" name="DownloadSettingsDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>650</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Cài Đặt Tải Về</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QTabWidget" name="tabWidget">
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <widget class="QWidget" name="ytdlpTab">
+      <attribute name="title">
+       <string>yt-dlp</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_2">
+       <item>
+        <widget class="QGroupBox" name="groupBox">
+         <property name="title">
+          <string>Tên tệp đầu ra</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label">
+            <property name="text">
+             <string>Video đơn lẻ:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLineEdit" name="singleVideoTemplateLineEdit"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Video trong playlist:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLineEdit" name="playlistVideoTemplateLineEdit"/>
+          </item>
+          <item row="3" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout">
+            <item>
+             <widget class="QRadioButton" name="addAsPrefixRadioButton">
+              <property name="text">
+               <string>Thêm vào đầu</string>
+              </property>
+              <property name="checked">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QRadioButton" name="addAsSuffixRadioButton">
+              <property name="text">
+               <string>Thêm vào cuối</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+              <property name="sizeHint" stdset="0">
+               <size>
+                <width>40</width>
+                <height>20</height>
+               </size>
+              </property>
+             </spacer>
+            </item>
+           </layout>
+          </item>
+          <item row="4" column="1">
+           <widget class="QCheckBox" name="addPlaylistIndexToNameCheckBox">
+            <property name="text">
+             <string>Thêm số thứ tự vào trước tên video trong playlist</string>
+            </property>
+           </widget>
+          </item>
+          <item row="5" column="1">
+           <widget class="QCheckBox" name="createPlaylistFolderCheckBox">
+            <property name="text">
+             <string>Tạo thư mục cho Playlist (cùng tên với playlist)</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QComboBox" name="templateAddComboBox">
+            <property name="toolTip">
+             <string>Thêm nhanh các thành phần vào mẫu tên file</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_2">
+         <property name="title">
+          <string>Đường dẫn</string>
+         </property>
+         <layout class="QFormLayout" name="formLayout_2">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>yt-dlp.exe:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <widget class="QLineEdit" name="ytdlpPathLineEdit"/>
+            </item>
+            <item>
+             <widget class="QToolButton" name="browseYtdlpPathButton">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>ffmpeg:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <layout class="QHBoxLayout" name="horizontalLayout_3">
+            <item>
+             <widget class="QLineEdit" name="ffmpegPathLineEdit"/>
+            </item>
+            <item>
+             <widget class="QToolButton" name="browseFfmpegPathButton">
+              <property name="text">
+               <string>...</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="queueTab">
+      <attribute name="title">
+       <string>Hàng đợi</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="verticalLayout_3">
+       <item>
+        <layout class="QFormLayout" name="formLayout_3">
+         <item row="0" column="0">
+          <widget class="QLabel" name="label_5">
+           <property name="text">
+            <string>Số luồng tải song song:</string>
+           </property>
+          </widget>
+         </item>
+         <item row="0" column="1">
+          <widget class="QSpinBox" name="concurrentDownloadsSpinBox">
+           <property name="minimum">
+            <number>1</number>
+           </property>
+           <property name="maximum">
+            <number>10</number>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="autoStartNextCheckBox">
+         <property name="text">
+          <string>Tự động tải mục tiếp theo khi hoàn thành</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="autoAddFromClipboardCheckBox">
+         <property name="text">
+          <string>Khi cửa sổ chương trình đang active, tự động thêm URL từ Clipboard</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QCheckBox" name="autoStartOnPauseCheckBox">
+         <property name="text">
+          <string>Tự động bắt đầu mục khác khi tạm dừng một mục</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacer_2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="sponsorBlockTab">
+      <attribute name="title">
+       <string>SponsorBlock</string>
+      </attribute>
+      <layout class="QHBoxLayout" name="horizontalLayout_4">
+       <item>
+        <widget class="QGroupBox" name="groupBox_3">
+         <property name="title">
+          <string>Cắt bỏ hoàn toàn các phân đoạn</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_4">
+          <item>
+           <widget class="QCheckBox" name="sb_remove_sponsor">
+            <property name="text">
+             <string>Sponsor (Quảng cáo)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_remove_selfpromo">
+            <property name="text">
+             <string>Self-promotion (Tự quảng bá)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_remove_interaction">
+            <property name="text">
+             <string>Interaction Reminder (Nhắc nhở tương tác)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_remove_intro">
+            <property name="text">
+             <string>Intro (Đoạn giới thiệu)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_remove_outro">
+            <property name="text">
+             <string>Outro (Đoạn kết)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_remove_preview">
+            <property name="text">
+             <string>Preview/Recap (Tóm tắt/Xem trước)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_remove_music_offtopic">
+            <property name="text">
+             <string>Music (Phần nhạc không liên quan)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_remove_filler">
+            <property name="text">
+             <string>Filler Tangent (Nội dung ngoài lề)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_3">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBox_4">
+         <property name="title">
+          <string>Đánh dấu thành các Chapter</string>
+         </property>
+         <layout class="QVBoxLayout" name="verticalLayout_5">
+          <item>
+           <widget class="QCheckBox" name="sb_mark_sponsor">
+            <property name="text">
+             <string>Sponsor (Quảng cáo)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_mark_selfpromo">
+            <property name="text">
+             <string>Self-promotion (Tự quảng bá)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_mark_interaction">
+            <property name="text">
+             <string>Interaction Reminder (Nhắc nhở tương tác)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_mark_intro">
+            <property name="text">
+             <string>Intro (Đoạn giới thiệu)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_mark_outro">
+            <property name="text">
+             <string>Outro (Đoạn kết)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_mark_preview">
+            <property name="text">
+             <string>Preview/Recap (Tóm tắt/Xem trước)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_mark_music_offtopic">
+            <property name="text">
+             <string>Music (Phần nhạc không liên quan)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QCheckBox" name="sb_mark_poi_highlight">
+            <property name="text">
+             <string>Highlight (Điểm nhấn)</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <spacer name="verticalSpacer_4">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
+          </item>
+         </layout>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>DownloadSettingsDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>DownloadSettingsDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Vị trí: /ui/widgets/settings/UpdateSettingsWidget.ui -->
+<!-- Phiên bản: 1.1 (Di chuyển giao diện từ DownloadSettingsDialog) -->
+<ui version="4.0">
+ <class>UpdateSettingsWidget</class>
+ <widget class="QWidget" name="UpdateSettingsWidget">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="appUpdateGroupBox">
+     <property name="title">
+      <string>Ứng dụng (ReupTool)</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_6">
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout_5">
+        <item>
+         <widget class="QLabel" name="label_6">
+          <property name="text">
+           <string>Phiên bản hiện tại:</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="currentAppVersionLabel">
+          <property name="font">
+           <font>
+            <bold>true</bold>
+           </font>
+          </property>
+          <property name="text">
+           <string>N/A</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_2">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="updateAppButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Cập nhật</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QLabel" name="latestAppVersionLabel">
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QTextBrowser" name="appChangelogBrowser"/>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="toolsUpdateGroupBox">
+     <property name="title">
+      <string>Công cụ</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout_4">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label_8">
+        <property name="text">
+         <string>yt-dlp:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_6">
+        <item>
+         <widget class="QLabel" name="ytdlpVersionLabel">
+          <property name="text">
+           <string>Đang kiểm tra...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_3">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="updateYtdlpButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Cập nhật yt-dlp</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_9">
+        <property name="text">
+         <string>ffmpeg:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <layout class="QHBoxLayout" name="horizontalLayout_7">
+        <item>
+         <widget class="QLabel" name="ffmpegVersionLabel">
+          <property name="text">
+           <string>Không thể kiểm tra</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="updateFfmpegButton">
+          <property name="enabled">
+           <bool>false</bool>
+          </property>
+          <property name="text">
+           <string>Cập nhật ffmpeg</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+    <item>
+    <widget class="QGroupBox" name="updateOptionsGroupBox">
+     <property name="title">
+      <string>Tùy chọn</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="autoCheckUpdateCheckBox">
+        <property name="text">
+         <string>Tự động kiểm tra cập nhật khi khởi động</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="checkUpdateButton">
+        <property name="text">
+         <string>Kiểm tra Cập nhật ngay</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="aboutGroupBox">
+     <property name="title">
+      <string>Giới thiệu (About)</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="aboutLabel">
+        <property name="text">
+         <string>ReupTool phiên bản X.X.X
+Bản quyền © 2024 TMTSoftware</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QProgressBar" name="updateProgressBar">
+     <property name="value">
+      <number>0</number>
+     </property>
+     <property name="textVisible">
+      <bool>false</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="updateStatusLabel">
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+</ui>

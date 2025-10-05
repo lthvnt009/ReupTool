@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DataSourceWidget</class>
+ <widget class="QWidget" name="DataSourceWidget">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Phương thức Lấy Dữ liệu (Fetching Strategy)</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="QRadioButton" name="apiRadioButton">
+        <property name="text">
+         <string>API (Ưu tiên tốc độ)</string>
+        </property>
+        <property name="checked">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QRadioButton" name="ytdlpRadioButton">
+        <property name="text">
+         <string>yt-dlp (Ưu tiên ổn định)</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Cấu hình API (API Keys)</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTabWidget" name="apiTabWidget">
+        <property name="currentIndex">
+         <number>0</number>
+        </property>
+        <widget class="QWidget" name="youtubeTab">
+         <attribute name="title">
+          <string>YouTube</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_3">
+          <item>
+           <widget class="QTableView" name="youtubeApiTableView"/>
+          </item>
+          <item>
+           <layout class="QHBoxLayout" name="horizontalLayout_2">
+            <item>
+             <spacer name="horizontalSpacer">
+              <property name="orientation">
+               <enum>Qt::Horizontal</enum>
+              </property>
+             </spacer>
+            </item>
+            <item>
+             <widget class="QPushButton" name="addYoutubeApiKeyButton">
+              <property name="text">
+               <string>Thêm...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="editYoutubeApiKeyButton">
+              <property name="text">
+               <string>Sửa...</string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="deleteYoutubeApiKeyButton">
+              <property name="text">
+               <string>Xóa</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </item>
+          <item>
+           <widget class="QLabel" name="youtubeApiHelpLabel">
+            <property name="text">
+             <string>&lt;a href=&quot;#&quot;&gt;Làm thế nào để lấy khóa API?&lt;/a&gt;</string>
+            </property>
+            <property name="openExternalLinks">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_3">
+     <property name="title">
+      <string>Cơ chế Dự phòng (Fallback)</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_4">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Khi chế độ API được ưu tiên, ứng dụng sẽ cố gắng lấy thông tin qua API 3 lần. Nếu tất cả các lần thử đều thất bại (do khóa sai, hết hạn ngạch, hoặc lỗi mạng), ứng dụng sẽ tự động chuyển sang dùng yt-dlp cho yêu cầu đó để đảm bảo dữ liệu luôn được lấy về.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>

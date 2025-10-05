@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>GeneralSettingsWidget</class>
+ <widget class="QWidget" name="GeneralSettingsWidget">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Ngôn ngữ (Language)</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="1">
+       <widget class="QComboBox" name="languageComboBox">
+        <item><property name="text"><string>Tiếng Việt</string></property></item>
+        <item><property name="text"><string>English</string></property></item>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Ngôn ngữ hiển thị:</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Hành vi Cửa sổ (Window Behavior)</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QCheckBox" name="rememberWindowSizeCheckBox">
+        <property name="text">
+         <string>Ghi nhớ kích thước và vị trí cửa sổ khi thoát</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>20</width>
+       <height>40</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+</ui>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Vị trí: /ui/widgets/channelstatisticswidget.ui -->
+<!-- Phiên bản: 1.1 (Cải tiến layout tên kênh) -->
+<ui version="4.0">
+ <class>ChannelStatisticsWidget</class>
+ <widget class="QWidget" name="ChannelStatisticsWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>300</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Thống Kê Video Đã Upload</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <layout class="QGridLayout" name="gridLayout">
+        <item row="0" column="0">
+         <layout class="QHBoxLayout" name="horizontalLayout">
+          <item>
+           <widget class="QLabel" name="label">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="text">
+             <string>Kênh:</string>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="channelNameLabel">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
+            <property name="font">
+             <font>
+              <bold>true</bold>
+             </font>
+            </property>
+            <property name="text">
+             <string>Vui lòng chọn một kênh</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+        <item row="1" column="0">
+         <layout class="QFormLayout" name="formLayout">
+          <item row="0" column="0">
+           <widget class="QLabel" name="label_2">
+            <property name="text">
+             <string>Khoảng Thời Gian:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QComboBox" name="timeRangeComboBox"/>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="label_3">
+            <property name="text">
+             <string>Từ Ngày:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QDateEdit" name="startDateEdit">
+            <property name="displayFormat">
+             <string>dd/MM/yyyy</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="label_4">
+            <property name="text">
+             <string>Đến Ngày:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QDateEdit" name="endDateEdit">
+            <property name="displayFormat">
+             <string>dd/MM/yyyy</string>
+            </property>
+            <property name="calendarPopup">
+             <bool>true</bool>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </item>
+       </layout>
+      </item>
+      <item>
+       <widget class="QPushButton" name="calculateButton">
+        <property name="text">
+         <string>Xem Thống Kê</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="Line" name="line">
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QLabel" name="resultLabel">
+        <property name="font">
+         <font>
+          <pointsize>10</pointsize>
+         </font>
+        </property>
+        <property name="text">
+         <string>Kết quả sẽ được hiển thị ở đây...</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

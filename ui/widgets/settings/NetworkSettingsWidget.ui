@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>NetworkSettingsWidget</class>
+ <widget class="QWidget" name="NetworkSettingsWidget">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Proxy</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QTableView" name="proxyTableView"/>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="addProxyButton">
+          <property name="text">
+           <string>Thêm...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="editProxyButton">
+          <property name="text">
+           <string>Sửa...</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="deleteProxyButton">
+          <property name="text">
+           <string>Xóa</string>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Cookie</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Chọn trình duyệt:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QComboBox" name="browserComboBox"/>
+      </item>
+      <item row="1" column="0">
+       <widget class="QLabel" name="label_2">
+        <property name="text">
+         <string>Chọn Profile:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QComboBox" name="profileComboBox"/>
+      </item>
+      <item row="2" column="1">
+       <widget class="QPushButton" name="importCookieButton">
+        <property name="text">
+         <string>Nhập Cookie từ Profile đã chọn</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="1">
+       <widget class="QPushButton" name="importCookieFileButton">
+        <property name="text">
+         <string>Hoặc tải từ file (cookies.txt)...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QLabel" name="cookieStatusLabel">
+        <property name="text">
+         <string>Trạng thái: Chưa nhập.</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+</ui>

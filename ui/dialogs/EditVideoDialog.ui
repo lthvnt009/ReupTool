@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Vị trí: /ui/dialogs/editvideodialog.ui -->
+<!-- Phiên bản: 1.0 (Mới) -->
+<ui version="4.0">
+ <class>EditVideoDialog</class>
+ <widget class="QDialog" name="EditVideoDialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>500</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Chỉnh Sửa Thông Tin Video</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <layout class="QFormLayout" name="formLayout">
+     <item row="0" column="0">
+      <widget class="QLabel" name="label">
+       <property name="text">
+        <string>Kênh:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="0" column="1">
+      <widget class="QComboBox" name="channelComboBox"/>
+     </item>
+     <item row="1" column="0">
+      <widget class="QLabel" name="label_2">
+       <property name="text">
+        <string>Link Video:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="1" column="1">
+      <widget class="QLineEdit" name="videoUrlLineEdit"/>
+     </item>
+     <item row="2" column="0">
+      <widget class="QLabel" name="label_10">
+       <property name="text">
+        <string>Ngày Video:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="2" column="1">
+      <widget class="QDateEdit" name="videoDateEdit">
+       <property name="calendarPopup">
+        <bool>true</bool>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="0">
+      <widget class="QLabel" name="label_3">
+       <property name="text">
+        <string>Tiêu đề mới:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="3" column="1">
+      <widget class="QLineEdit" name="newTitleLineEdit"/>
+     </item>
+     <item row="4" column="0">
+      <widget class="QLabel" name="label_4">
+       <property name="text">
+        <string>Mô tả:</string>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+       </property>
+      </widget>
+     </item>
+     <item row="4" column="1">
+      <widget class="QPlainTextEdit" name="descriptionTextEdit"/>
+     </item>
+     <item row="5" column="0">
+      <widget class="QLabel" name="label_5">
+       <property name="text">
+        <string>Tags:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="5" column="1">
+      <widget class="QLineEdit" name="tagsLineEdit"/>
+     </item>
+     <item row="6" column="0">
+      <widget class="QLabel" name="label_6">
+       <property name="text">
+        <string>Tags con:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="6" column="1">
+      <widget class="QLineEdit" name="subTagsLineEdit"/>
+     </item>
+     <item row="7" column="0">
+      <widget class="QLabel" name="label_7">
+       <property name="text">
+        <string>Playlist:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="7" column="1">
+      <widget class="QLineEdit" name="playlistLineEdit"/>
+     </item>
+     <item row="8" column="0">
+      <widget class="QLabel" name="label_8">
+       <property name="text">
+        <string>Danh mục:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="8" column="1">
+      <widget class="QLineEdit" name="categoryLineEdit"/>
+     </item>
+     <item row="9" column="0">
+      <widget class="QLabel" name="label_9">
+       <property name="text">
+        <string>Trạng thái:</string>
+       </property>
+      </widget>
+     </item>
+     <item row="9" column="1">
+      <widget class="QComboBox" name="statusComboBox"/>
+     </item>
+    </layout>
+   </item>
+   <item>
+    <widget class="QDialogButtonBox" name="buttonBox">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="standardButtons">
+      <set>QDialogButtonBox::Cancel|QDialogButtonBox::Save</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>accepted()</signal>
+   <receiver>EditVideoDialog</receiver>
+   <slot>accept()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>248</x>
+     <y>254</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>157</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonBox</sender>
+   <signal>rejected()</signal>
+   <receiver>EditVideoDialog</receiver>
+   <slot>reject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>316</x>
+     <y>260</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>286</x>
+     <y>274</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

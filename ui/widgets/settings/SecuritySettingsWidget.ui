@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>SecuritySettingsWidget</class>
+ <widget class="QWidget" name="SecuritySettingsWidget">
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QGroupBox" name="groupBox">
+     <property name="title">
+      <string>Mã hóa Dữ liệu (Data Encryption)</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_2">
+      <item>
+       <widget class="QLabel" name="label">
+        <property name="text">
+         <string>Để đảm bảo an toàn, mọi dữ liệu nhạy cảm (như API key, cookie) đều được mã hóa theo mặc định trước khi lưu vào file cấu hình.</string>
+        </property>
+        <property name="wordWrap">
+         <bool>true</bool>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QGroupBox" name="groupBox_2">
+     <property name="title">
+      <string>Mật khẩu Cơ sở dữ liệu (Database Password)</string>
+     </property>
+     <layout class="QVBoxLayout" name="verticalLayout_3">
+      <item>
+       <widget class="QPushButton" name="setDbPasswordButton">
+        <property name="text">
+         <string>Đặt / Thay đổi mật khẩu...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <spacer name="verticalSpacer">
+     <property name="orientation">
+      <enum>Qt::Vertical</enum>
+     </property>
+    </spacer>
+   </item>
+  </layout>
+ </widget>
+</ui>

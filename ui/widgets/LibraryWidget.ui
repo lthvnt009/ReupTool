@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Vị trí: /ui/widgets/librarywidget.ui -->
+<!-- Phiên bản: 1.1 (Sửa lỗi Build - Promoted Widgets) -->
+<ui version="4.0">
+ <class>LibraryWidget</class>
+ <widget class="QWidget" name="LibraryWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <property name="leftMargin">
+    <number>0</number>
+   </property>
+   <property name="topMargin">
+    <number>0</number>
+   </property>
+   <property name="rightMargin">
+    <number>0</number>
+   </property>
+   <property name="bottomMargin">
+    <number>0</number>
+   </property>
+   <item>
+    <widget class="LibraryToolbarWidget" name="toolbarWidget" native="true"/>
+   </item>
+   <item>
+    <widget class="QTableView" name="videoTableView">
+     <property name="contextMenuPolicy">
+      <enum>Qt::CustomContextMenu</enum>
+     </property>
+     <property name="selectionMode">
+      <enum>QAbstractItemView::ExtendedSelection</enum>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="sortingEnabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="LibraryPaginationWidget" name="paginationWidget" native="true"/>
+   </item>
+  </layout>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>LibraryToolbarWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets/librarytoolbarwidget.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>LibraryPaginationWidget</class>
+   <extends>QWidget</extends>
+   <header>widgets/librarypaginationwidget.h</header>
+   <container>1</container>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections/>
+</ui>
+
